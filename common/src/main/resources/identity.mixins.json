@@ -17,7 +17,6 @@
     "PiglinBruteBrainMixin",
     "PlayerAdvancementTrackerMixin",
     "PlayerByteStatusMixin",
-    "PlayerEntityAttackMixin",
     "PlayerEntityMixin",
     "PlayerManagerMixin",
     "PlayerSonicBoomMixin",

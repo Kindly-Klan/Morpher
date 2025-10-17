@@ -1,6 +1,5 @@
 package draylar.identity.mixin;
 
-import draylar.identity.api.IdentityGranting;
 import draylar.identity.api.PlayerIdentity;
 import draylar.identity.api.SafeTagManager;
 import draylar.identity.api.variant.IdentityType;
@@ -58,13 +57,7 @@ public abstract class LivingEntityMixin extends Entity implements NearbySongAcce
             at = @At("RETURN")
     )
     private void onDeath(DamageSource source, CallbackInfo ci) {
-        Entity attacker = source.getAttacker();
-        @Nullable IdentityType<?> thisType = IdentityType.from((LivingEntity) (Object) this);
-
-        // check if attacker is a player to grant identity
-        if (attacker instanceof PlayerEntity && thisType != null) {
-            IdentityGranting.grantByAttack((PlayerEntity) attacker, thisType);
-        }
+        // Sistema de desbloqueo por matar eliminado - ya no se otorgan identidades al matar entidades
     }
 
     @Inject(method = "baseTick", at = @At("HEAD"))

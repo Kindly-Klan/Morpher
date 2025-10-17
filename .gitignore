@@ -10,7 +10,7 @@ classes/
 *.launch
 
 # idea
-
+API_DOCUMENTATION.md
 .idea/
 *.iml
 *.ipr

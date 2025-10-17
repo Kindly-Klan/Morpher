@@ -5,7 +5,6 @@ import draylar.identity.api.PlayerIdentity;
 import draylar.identity.impl.PlayerDataProvider;
 import draylar.identity.network.ClientNetworking;
 import draylar.identity.network.NetworkHandler;
-import draylar.identity.screen.VillagerProfessionScreen;
 import io.netty.buffer.Unpooled;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.passive.VillagerEntity;
@@ -98,18 +97,8 @@ public class VillagerProfessionPackets {
     }
 
     public static void registerClientHandler() {
-        NetworkManager.registerReceiver(
-                NetworkManager.Side.S2C,
-                OpenProfessionScreenPayload.ID,
-                OpenProfessionScreenPayload.CODEC,
-                (payload, context) -> {
-                    ClientNetworking.runOrQueue(context, player -> {
-                        MinecraftClient.getInstance().setScreen(
-                                new VillagerProfessionScreen(payload.professionId(), payload.pos(), payload.worldId())
-                        );
-                    });
-                }
-        );
+        // VillagerProfessionScreen eliminado - ya no hay menú de selección
+        // Los jugadores pueden usar comandos para cambiar de forma
     }
 
 

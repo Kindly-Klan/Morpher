@@ -8,7 +8,6 @@ import draylar.identity.api.PlayerIdentity;
 import draylar.identity.api.PlayerUnlocks;
 import draylar.identity.api.platform.IdentityConfig;
 import draylar.identity.api.variant.IdentityType;
-import draylar.identity.screen.widget.EntityWidget;
 import net.minecraft.command.argument.EntityArgumentType;
 import net.minecraft.command.argument.NbtCompoundArgumentType;
 import net.minecraft.command.argument.IdentifierArgumentType;
@@ -192,21 +191,6 @@ public class IdentityCommand {
                              )
                      )
                      .build();
-            LiteralCommandNode<ServerCommandSource> offsetNode =
-                    CommandManager.literal("offset")
-                            .then(CommandManager.argument("value", IntegerArgumentType.integer())
-                                    .executes(ctx -> {
-                                        int v = IntegerArgumentType.getInteger(ctx, "value");
-                                        EntityWidget.VERTICAL_OFFSET = v;
-                                        ctx.getSource()
-                                                .sendFeedback(
-                                                        ()-> Text.literal("Entity‑grid Y‑offset set to §e" + v + "§r"),
-                                                        false
-                                                );
-                                        return 1;
-                                    })
-                            ).build();
-
             LiteralCommandNode<ServerCommandSource> whitelistNode =
                     CommandManager.literal("whitelist")
                             .then(CommandManager.literal("enable")
@@ -286,7 +270,6 @@ public class IdentityCommand {
             rootNode.addChild(equip);
             rootNode.addChild(unequip);
             rootNode.addChild(test);
-            rootNode.addChild(offsetNode);
             rootNode.addChild(whitelistNode);
             rootNode.addChild(professionNode);
 
