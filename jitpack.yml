@@ -5,11 +5,11 @@ before_install:
   - chmod +x gradlew
 
 install:
-  # Compilamos solo el subproyecto Fabric (no Forge ni Common)
   - ./gradlew :fabric:build
 
 build:
   artifacts:
-    # Publica el jar principal que ya está remapeado
-    - path: fabric/build/libs/identity-fabric-*.jar
+    # Publica todos los JARs generados dentro de fabric/build/libs
+    - path: fabric/build/libs/*.jar
+      type: jar
       name: identity-fabric
