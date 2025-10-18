@@ -1,0 +1,15 @@
+jdk:
+  - openjdk21
+
+before_install:
+  - chmod +x gradlew
+
+install:
+  # Compilamos solo el subproyecto Fabric (no Forge ni Common)
+  - ./gradlew :fabric:build
+
+build:
+  artifacts:
+    # Publica el jar principal que ya está remapeado
+    - path: fabric/build/libs/identity-fabric-*.jar
+      name: identity-fabric
