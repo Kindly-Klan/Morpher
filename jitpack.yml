@@ -7,9 +7,12 @@ before_install:
 install:
   - ./gradlew :fabric:build
 
+after_success:
+  - mkdir -p build/libs
+  - cp fabric/build/libs/*.jar build/libs/
+
 build:
   artifacts:
-    # Publica todos los JARs generados dentro de fabric/build/libs
-    - path: fabric/build/libs/*.jar
+    - path: build/libs/*.jar
       type: jar
       name: identity-fabric
