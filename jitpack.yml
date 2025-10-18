@@ -1,8 +1,8 @@
 jdk:
-  - openjdk17
+  - openjdk21
 
 install:
   - ./gradlew common:build
 
 build:
-  - ./gradlew common:sourcesJar common:jar
+  - ./gradlew common:jar common:sourcesJar
