@@ -15,3 +15,7 @@ build:
     - path: build/libs/*.jar
       name: identity-fabric
       type: jar
+
+
+script:
+  - ./gradlew :fabric:publishToMavenLocal
