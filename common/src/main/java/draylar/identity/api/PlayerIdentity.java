@@ -31,6 +31,16 @@ public class PlayerIdentity {
         return ((PlayerDataProvider) player).getIdentity();
     }
 
+    /**
+     * Alias for getIdentity() for backward compatibility.
+     * 
+     * @param player the player to get the identity from
+     * @return the current {@link LivingEntity} identity associated with this player, or null if they have no identity equipped
+     */
+    public static LivingEntity getEntity(PlayerEntity player) {
+        return getIdentity(player);
+    }
+
     public static IdentityType<?> getIdentityType(PlayerEntity player) {
         return ((PlayerDataProvider) player).getIdentityType();
     }
