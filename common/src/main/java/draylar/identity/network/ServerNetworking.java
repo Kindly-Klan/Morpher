@@ -25,6 +25,32 @@ public class ServerNetworking implements NetworkHandler {
         SwapPackets.registerIdentityRequestPacketHandler();
         VillagerProfessionPackets.registerServerHandler();
         VillagerTradePackets.registerTradeRequestHandler();
+
+        // Registrar payloads S2C necesarios para evitar NullPointerException con codecs
+        NetworkManager.registerS2CPayloadType(
+                ConfigSyncPayload.ID,
+                ConfigSyncPayload.CODEC
+        );
+        NetworkManager.registerS2CPayloadType(
+                IdentitySyncPayload.ID,
+                IdentitySyncPayload.CODEC
+        );
+        NetworkManager.registerS2CPayloadType(
+                AbilitySyncPayload.ID,
+                AbilitySyncPayload.CODEC
+        );
+        NetworkManager.registerS2CPayloadType(
+                UnlockSyncPayload.ID,
+                UnlockSyncPayload.CODEC
+        );
+        NetworkManager.registerS2CPayloadType(
+                FavoriteSyncPayload.ID,
+                FavoriteSyncPayload.CODEC
+        );
+        NetworkManager.registerS2CPayloadType(
+                OpenProfessionScreenPayload.ID,
+                OpenProfessionScreenPayload.CODEC
+        );
     }
 
     public static void registerUseAbilityPacketHandler() {
