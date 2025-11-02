@@ -25,7 +25,5 @@
   "identity.help.credits_general": "Geral: Pyrofab, AllanChain, James103, lawleagle",
   "identity.help.credits_translators": "Tradutores: qsefthuopq, Godzmoline, cominixo",
   "identity.help.return": "Pressione qualquer tecla para voltar para o menu do Identity.",
-  "key.categories.identity": "Identity",
-  "key.identity": "Abrir o menu do Identity",
-  "key.identity_ability": "Usar uma Habilidade do Identity"
+  "key.identity": "Abrir o menu do Identity"
 }

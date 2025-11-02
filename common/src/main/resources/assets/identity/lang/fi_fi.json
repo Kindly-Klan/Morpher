@@ -25,7 +25,5 @@
   "identity.help.credits_general": "Yleiset: Pyrofab, AllanChain, James103, lawleagle",
   "identity.help.credits_translators": "Kääntäjät: qsefthuopq, Godzmoline, Juuz",
   "identity.help.return": "Paina mitä tahansa näppäintä palataksesi Identity-valikkoon.",
-  "key.categories.identity": "Identity",
-  "key.identity": "Avaa Identity-valikko",
-  "key.identity_ability": "Käytä identiteettikykyä"
+  "key.identity": "Avaa Identity-valikko"
 }

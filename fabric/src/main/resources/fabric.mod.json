@@ -3,15 +3,9 @@
   "id": "identity",
   "version": "${version}",
   "name": "Identity",
-  "description": "Play as your favorite entities!",
+  "description": "Transform into entities.",
   "authors": [
-    "Draylar",
-    "Gaboouu"
-  ],
-  "contributors": [
-    "James103",
-    "Pyrofab",
-    "AllanChain"
+    "Javivi"
   ],
   "license": "MIT",
   "icon": "icon.png",
